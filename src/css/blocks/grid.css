@@ -1,0 +1,10 @@
+[class*='col-'] {
+  float: right;
+}
+.container {
+  width: 1024px;
+}
+.col_invert-float {
+  float: left;
+}
+/*# sourceMappingURL=src/stylus/blocks/grid.css.map */

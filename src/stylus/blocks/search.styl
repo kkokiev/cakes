@@ -1,0 +1,66 @@
+.search
+	padding-top 100px
+	padding-bottom 145px
+	background #c2c2c2 url(images/static/bg-1.jpg) center center no-repeat
+	-webkit-background-size cover
+	-moz-background-size cover
+	-o-background-size cover
+	background-size cover
+
+	&_inner
+		padding-top 50px
+		padding-bottom 90px
+		background #c2c2c2
+
+	&__wrap
+		max-width 640px
+		margin 0 auto
+		padding-x(20px)
+
+	&__options
+		clearfix()
+		padding-y(8px)
+		color light
+		font-size 25px
+		line-height 30px
+
+	&__option-wrap
+		float right
+		margin-left 10px
+
+	&__inputs
+		position relative
+
+	&__input-search
+		display block
+		height 88px
+		width 100%
+		padding-left 162px
+		padding-right 15px
+		color main-dark
+		font-size 30px
+		background rgba(255, 255, 255, .78)
+		border none
+
+	&__submit-wrap
+		position absolute
+		top 6px
+		left 6px
+		width 150px
+
+	&__submit
+		display block
+		height 76px
+		width 100%
+		color main-dark
+		font-size 30px
+		text-align center
+		background light
+		border none
+		tr(.3s)
+
+		&:hover,
+		&:focus
+			color main-light
+			background #505050
+

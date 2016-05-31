@@ -1,0 +1,116 @@
+.menu
+	clearfix()
+
+	> li
+		position relative
+		float right
+		margin-left 25px
+		color main-light
+		font-size 20px
+
+		+below(900px)
+			float none
+			margin-left 0
+			border-bottom 1px solid main-light
+
+			&:last-child
+				border-bottom 0
+
+		> a
+			display block
+			padding-y(5px)
+			color main-light
+			text-decoration none
+
+			+below(900px)
+				padding-y(10px)
+
+			&:hover,
+			&:focus
+				color main
+
+	>li.active
+
+		> a
+			color main
+
+.sub-menu
+	overflow hidden
+	height 0
+	position absolute
+	min-width 100%
+	top 100%
+	right 0
+	z-index 1000
+	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"')
+	filter unquote('alpha(opacity=0)')
+	-moz-opacity 0
+	-khtml-opacity 0
+	opacity 0
+	tr(.4s)
+
+	+below(900px)
+		position static
+		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"')
+		filter unquote('alpha(opacity=100)')
+		-moz-opacity 1
+		-khtml-opacity 1
+		opacity 1
+
+	> li
+		border-bottom 1px solid light
+
+		&:last-child
+			border none
+
+		> a
+			display block
+			padding-x(10px)
+			color light
+			font-size 20px
+			line-height 20px
+			background main-dark
+			text-decoration none
+
+			&:hover,
+			&:focus
+				background #1f1f1f
+
+.sub-menu.open
+	height auto
+	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"')
+	filter unquote('alpha(opacity=100)')
+	-moz-opacity 1
+	-khtml-opacity 1
+	opacity 1
+
+	>li
+		> a
+			line-height 40px
+
+.menu-mobile-icon
+	display none
+	position absolute
+	top 0
+	left 0
+	padding-top 7px
+	margin-y(auto)
+	height 40px
+	width 40px
+	cursor pointer
+
+	&:hover
+		span
+			background main
+
+	span
+		display block
+		height 5px
+		width 40px
+		margin-bottom 5px
+		background main-light
+		tr(.3s)
+
+
+	+below(900px)
+		display block

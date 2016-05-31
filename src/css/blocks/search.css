@@ -1,0 +1,63 @@
+.search {
+  padding-top: 100px;
+  padding-bottom: 145px;
+  background: #c2c2c2 url("images/static/bg-1.jpg") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.search_inner {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background: #c2c2c2;
+}
+.search__wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.search__options {
+  color: light;
+  font-size: 25px;
+  line-height: 30px;
+}
+.search__option-wrap {
+  float: right;
+  margin-left: 10px;
+}
+.search__inputs {
+  position: relative;
+}
+.search__input-search {
+  display: block;
+  height: 88px;
+  width: 100%;
+  padding-left: 162px;
+  padding-right: 15px;
+  color: main-dark;
+  font-size: 30px;
+  background: rgba(255,255,255,0.78);
+  border: none;
+}
+.search__submit-wrap {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 150px;
+}
+.search__submit {
+  display: block;
+  height: 76px;
+  width: 100%;
+  color: main-dark;
+  font-size: 30px;
+  text-align: center;
+  background: light;
+  border: none;
+}
+.search__submit:hover,
+.search__submit:focus {
+  color: main-light;
+  background: #505050;
+}
+/*# sourceMappingURL=src/stylus/blocks/search.css.map */
