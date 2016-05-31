@@ -2802,6 +2802,9 @@ body {
 h3 {
   font-size: 30px;
 }
+h4 {
+  font-size: 25px;
+}
 p {
   font-size: 16px;
   line-height: 1.2;
@@ -2923,6 +2926,17 @@ img {
   -o-background-size: cover;
   background-size: cover;
 }
+.checkbox__input_alt:not(:checked) + label:before,
+.checkbox__input_alt:checked + label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: block;
+  height: 28px;
+  width: 28px;
+  background: #f2f2f2;
+}
 .checkbox__input:not(:checked) + label:after,
 .checkbox__input:checked + label:after {
   content: '';
@@ -2933,6 +2947,24 @@ img {
   height: 28px;
   width: 28px;
   background-image: url("images/static/bg-check-2.png");
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.checkbox__input_alt:not(:checked) + label:after,
+.checkbox__input_alt:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: block;
+  height: 28px;
+  width: 28px;
+  background-image: url("images/static/bg-check-3.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2960,11 +2992,20 @@ img {
   font-size: 25px;
   line-height: 30px;
 }
+.checkbox__label_alt {
+  font-size: 16px;
+}
 .contact {
-  padding-top: 80px;
+  padding-top: 85px;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding-top: 30px;
+  }
 }
 .contact__text-block {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .contact__form {
   padding-top: 30px;
@@ -2976,18 +3017,46 @@ img {
 .contact__textarea {
   display: block;
   width: 100%;
+  padding-top: 14px;
+  padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
+  color: #8a8a8a;
   font-size: 30px;
   border: none;
   background: #f2f2f2;
+}
+@media only screen and (max-width: 480px) {
+  .contact__input,
+  .contact__textarea {
+    font-size: 20px;
+  }
+}
+.contact__input::-webkit-input-placeholder,
+.contact__textarea::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+.contact__input:-moz-placeholder,
+.contact__textarea:-moz-placeholder {
+  color: #c0c0c0;
+}
+.contact__input::-moz-placeholder,
+.contact__textarea::-moz-placeholder {
+  color: #c0c0c0;
+}
+.contact__input:-ms-input-placeholder,
+.contact__textarea:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+.contact__textarea {
+  height: 145px;
 }
 .contact__submit {
   display: block;
   width: 100%;
   color: #c0c0c0;
   font-size: 30px;
-  line-height: 88px;
+  line-height: 70px;
   text-align: center;
   border: 0;
   background: #363636;
@@ -2997,9 +3066,26 @@ img {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media only screen and (max-width: 480px) {
+  .contact__submit {
+    line-height: 56px;
+  }
+}
 .contact__submit:hover,
 .contact__submit:focus {
   background: #000;
+}
+.content {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    padding-top: 30px;
+  }
+}
+.content__text-block {
+  margin-bottom: 20px;
 }
 .copyright {
   color: #a1a1a1;
@@ -3063,6 +3149,26 @@ img {
 .logo__img {
   display: block;
   width: 100%;
+}
+.main_contact {
+  background-image: url("images/static/bg-big-2.jpg");
+  background-color: transparent;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background-size: auto 100%;
+}
+.main_content {
+  background-image: url("images/static/bg-big.jpg");
+  background-color: transparent;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  background-size: auto 100%;
 }
 .menu:after {
   display: table;

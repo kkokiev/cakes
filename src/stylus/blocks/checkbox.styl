@@ -24,6 +24,17 @@
 		background-image url(images/static/bg-check-1.png)
 		bg-image()
 
+	&__input_alt:not(:checked) + label:before,
+	&__input_alt:checked + label:before
+		content ''
+		position absolute
+		top 2px
+		right 0
+		display block
+		height 28px
+		width 28px
+		background #f2f2f2
+
 	/* checked mark aspect */
 	&__input:not(:checked) + label:after,
 	&__input:checked + label:after
@@ -35,6 +46,18 @@
 		height 28px
 		width 28px
 		background-image url(images/static/bg-check-2.png)
+		bg-image()
+
+	&__input_alt:not(:checked) + label:after,
+	&__input_alt:checked + label:after
+		content ''
+		position absolute
+		top 2px
+		right 0
+		display block
+		height 28px
+		width 28px
+		background-image url(images/static/bg-check-3.png)
 		bg-image()
 
 	/* checked mark aspect changes */
@@ -56,3 +79,6 @@
 		display block
 		font-size 25px
 		line-height 30px
+
+		&_alt
+			font-size 16px
