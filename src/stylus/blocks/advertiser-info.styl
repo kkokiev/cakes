@@ -1,0 +1,46 @@
+.advertiser-info
+
+	&__review-block
+		padding-left 15px
+
+		+below(900px)
+			padding-left 0
+			margin-bottom 30px
+
+	&__header
+		padding-top 10px
+		padding-bottom 20px
+
+	&__row
+		margin-bottom 20px
+
+		&:last-child
+			margin-bottom 0
+
+	&__review-btn
+		display inline-block
+		padding-x(20px)
+		color light
+		line-height 30px
+		single-line()
+		text-decoration none
+		background bg-dark
+
+		&:hover,
+		&:focus
+			background #000
+
+	&__contact-block
+		padding-right 20px
+		border-right 1px solid #a1a1a1
+
+		+below(900px)
+			padding-right 0
+			border-right none
+
+	&__contact-info
+		padding-left 20px
+
+		+below(600px)
+			padding-left 0
+			margin-bottom 20px

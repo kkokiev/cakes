@@ -1,4 +1,5 @@
 .search
+	width 100%
 	padding-top 100px
 	padding-bottom 145px
 	background #c2c2c2 url(images/static/bg-1.jpg) center center no-repeat
@@ -7,19 +8,29 @@
 	-o-background-size cover
 	background-size cover
 
+	+below(size-tablet)
+		padding-y(50px)
+
 	&_inner
 		padding-top 50px
 		padding-bottom 90px
 		background #c2c2c2
+
+		+below(size-tablet)
+			padding-y(30px)
 
 	&__wrap
 		max-width 640px
 		margin 0 auto
 		padding-x(20px)
 
+		+below(size-tablet)
+			max-width 90%
+
 	&__options
 		clearfix()
-		padding-y(8px)
+		padding-top 8px
+		padding-bottom 3px
 		color light
 		font-size 25px
 		line-height 30px
@@ -27,6 +38,7 @@
 	&__option-wrap
 		float right
 		margin-left 10px
+		margin-bottom 5px
 
 	&__inputs
 		position relative
@@ -42,11 +54,23 @@
 		background rgba(255, 255, 255, .78)
 		border none
 
+		+below(size-tablet)
+			height 50px
+
+		+below(size-smallest)
+			padding-x(15px)
+			font-size 20px
+
 	&__submit-wrap
 		position absolute
 		top 6px
 		left 6px
 		width 150px
+
+		+below(size-smallest)
+			position static
+			width 50%
+			margin-top 6px
 
 	&__submit
 		display block
@@ -58,6 +82,13 @@
 		background light
 		border none
 		tr(.3s)
+
+		+below(size-tablet)
+			height 38px
+			line-height 36px
+
+		+below(size-smallest)
+			font-size 20px
 
 		&:hover,
 		&:focus

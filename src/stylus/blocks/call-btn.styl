@@ -1,0 +1,51 @@
+.call-btn
+	position relative
+	display inline-block
+	width 100%
+	overflow hidden
+	text-decoration none
+	text-align center
+
+	&:hover,
+	&:focus
+
+		.call-btn__overlay
+			top 0
+
+	&__body
+		display block
+		padding 5px
+		color light
+		background #727272
+
+	&__body-title
+		display block
+		font-size 16px
+		line-height 1.2
+		single-line()
+
+	&__advertiser
+		display block
+		max-width 100%
+		font-size 18px
+		line-height 1.2
+		single-line()
+
+	&__overlay
+		position absolute
+		top 100%
+		left 0
+		display block
+		width 100%
+		padding-x(5px)
+		color light
+		font-size 20px
+		background #000
+		text-align middle
+		tr(.3s)
+
+		span
+			display inline-block
+			width 100%
+			line-height 48px
+			single-line()

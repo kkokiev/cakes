@@ -1,0 +1,200 @@
+.advertiser-header
+	padding-bottom 30px
+	border-bottom 1px solid border
+
+	>.grid
+		display table
+		width 100%
+		table-layout fixed
+
+		+below(size-tablet)
+			display block
+
+		> div
+			float none
+			display table-cell
+			vertical-align middle
+
+			+below(size-tablet)
+				float right
+				display block
+
+			&:last-child
+				vertical-align top
+				text-align left
+
+				+below(size-tablet)
+					text-align right
+
+	&__logo
+		display inline-block
+		padding-left 25px
+		text-decoration none
+		color main-dark
+
+		+below(480px)
+			margin-bottom 20px
+			padding-left 0
+
+		img
+			display inline-block
+			width 100%
+
+			+below(480px)
+				max-width 120px
+				margin-x(auto)
+
+	&__info
+		padding-x(25px)
+		border-left 1px solid border
+		border-right 1px solid border
+
+		+below(size-tablet)
+			padding-left 0
+			border-left 0
+
+		+below(480px)
+			padding-right 0
+			border-right 0
+
+	&__info-title
+		margin-bottom 15px
+		font-size 30px
+		line-height 34px
+
+		a
+			color main-dark
+			text-decoration none
+
+			&:hover,
+			&:focus
+				color main
+
+		small
+			font-size 20px
+
+	&__img-wrap
+		padding-right 20px
+		text-align left
+
+		+below(size-tablet)
+			padding-top 15px
+			padding-right 0
+			text-align right
+
+	&__img-body
+		position relative
+		display inline-block
+		width 80px
+
+	&__img
+		display block
+		height 0
+		width 100%
+		padding-bottom 100%
+		bg-image()
+
+	&__img-overlay
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		text-decoration none
+		background-color rgba(0,0,0, .4)
+		background-image url(images/static/icon-mag.png)
+		background-position center center
+		background-repeat no-repeat
+		cursor pointer
+		border 4px solid rgba(255, 255, 255, .4)
+
+		&:hover,
+		&:focus
+			border 4px solid rgba(0, 0, 0, .8)
+
+	&__call-btn-wrap
+		margin-bottom 5px
+
+
+	&__contact-form-btn
+		display inline-block
+		width 100%
+		padding-x(5px)
+		color light
+		line-height 30px
+		text-align center
+		text-decoration none
+		background #464646
+
+		&:hover,
+		&:focus
+			background main
+
+
+	//image modal
+	&__img-modal
+		display none
+		position fixed
+		top 0
+		bottom 0
+		left 0
+		right 0
+		background rgba(0,0,0, .7)
+		overflow-x hidden
+		overflow-y auto
+		z-index 1200
+		cursor pointer
+		text-align center
+
+
+	&__img-modal-body
+		display inline-block
+		margin 30px 0
+		width auto
+		cursor default
+
+	&__img-modal-close-wrap
+		margin-top 20px
+		margin-bottom 10px
+		text-align left
+
+	&__img-modal-img
+		max-height 70vh
+		max-width 100%
+
+
+	&__footer
+		padding-right 25px
+
+		+below(size-tablet)
+			padding-right 0
+			padding-top 20px
+
+	&__tags-wrap
+		padding-right 20px
+		text-align left
+
+		+below(size-tablet)
+			padding-top 15px
+			padding-right 0
+			text-align right
+
+	&__tags-title
+		display block
+		margin-bottom 25px
+		color main-dark
+		font-weight bold
+
+	&__tag
+		margin-bottom 5px
+
+		+below(size-tablet)
+			float right
+			margin-left 5px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+

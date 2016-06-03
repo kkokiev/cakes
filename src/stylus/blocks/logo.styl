@@ -1,8 +1,18 @@
 .logo
 
+	&__body
+		text-align left
+
 	&__link
+		display inline-block
 		text-decoration none
 
 	&__img
 		display block
 		width 100%
+
+		+below(900px)
+			max-width 300px
+
+		+below(480px)
+			max-width 200px

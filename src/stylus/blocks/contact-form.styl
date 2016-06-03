@@ -1,0 +1,46 @@
+.contact-form
+
+
+	&__input-grp
+		margin-bottom 10px
+
+		&:last-child
+			margin-bottom 0
+
+	&__input,
+	&__textarea
+		display block
+		width 100%
+		padding-y(4px)
+		padding-x(10px)
+		border none
+		background #f2f2f2
+
+		&::-webkit-input-placeholder
+			color #c0c0c0
+
+		&:-moz-placeholder /* Firefox 18- */
+			color #c0c0c0
+
+		&::-moz-placeholder  /* Firefox 19+ */
+			color #c0c0c0
+
+		&:-ms-input-placeholder
+			color #c0c0c0
+
+	&__textarea
+		height 90px
+
+	&__submit
+		display block
+		height 30px
+		width 100%
+		color light
+		text-align center
+		border 0
+		background bg-dark
+		tr(.3s)
+
+		&:hover,
+		&:focus
+			background #000

@@ -1,18 +1,16 @@
 .contact
-	padding-top 85px
-	padding-bottom 20px
-
-	+below(size-tablet)
-		padding-top 30px
-
-	&__text-block
-		margin-bottom 20px
 
 	&__form
 		padding-top 30px
 
+		+below(size-tablet)
+			padding-top 20px
+
 	&__input-wrap
 		margin-bottom 18px
+
+		&:last-child
+			margin-bottom 0
 
 	&__input,
 	&__textarea
@@ -26,7 +24,8 @@
 		border none
 		background #f2f2f2
 
-		+below(size-smallest)
+		+below(size-tablet)
+			padding-y(8px)
 			font-size 20px
 
 		&::-webkit-input-placeholder
@@ -45,6 +44,9 @@
 	&__textarea
 		height 145px
 
+		+below(size-tablet)
+			height 100px
+
 	&__submit
 		display block
 		width 100%
@@ -53,12 +55,12 @@
 		line-height 70px
 		text-align center
 		border 0
-		background #363636
+		background bg-dark
 		cursor pointer
 		tr(.3s)
 
-		+below(size-smallest)
-			line-height 56px
+		+below(size-tablet)
+			line-height 43px
 
 		&:hover,
 		&:focus

@@ -1,0 +1,14 @@
+.logo__body {
+  text-align: left;
+}
+.logo__link {
+  display: inline-block;
+  text-decoration: none;
+}
+.logo__img {
+  display: block;
+  width: 100%;
+below(900px)
+below(480px)
+}
+/*# sourceMappingURL=src/stylus/blocks/logo.css.map */

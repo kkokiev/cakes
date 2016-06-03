@@ -1,0 +1,35 @@
+.advertiser-info__review-block {
+  padding-left: 15px;
+below(900px)
+}
+.advertiser-info__header {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.advertiser-info__row {
+  margin-bottom: 20px;
+}
+.advertiser-info__row:last-child {
+  margin-bottom: 0;
+}
+.advertiser-info__review-btn {
+  display: inline-block;
+  color: light;
+  line-height: 30px;
+  text-decoration: none;
+  background: bg-dark;
+}
+.advertiser-info__review-btn:hover,
+.advertiser-info__review-btn:focus {
+  background: #000;
+}
+.advertiser-info__contact-block {
+  padding-right: 20px;
+  border-right: 1px solid #a1a1a1;
+below(900px)
+}
+.advertiser-info__contact-info {
+  padding-left: 20px;
+below(600px)
+}
+/*# sourceMappingURL=src/stylus/blocks/advertiser-info.css.map */

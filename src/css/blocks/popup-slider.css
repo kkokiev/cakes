@@ -1,0 +1,33 @@
+.popup-slider {
+  tabindex: -1;
+  height: 0;
+  text-align: center;
+  overflow: hidden;
+}
+.popup-slider_opened {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: 15px;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  overflow-y: auto;
+}
+.popup-slider__wrap {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  overflow: hidden;
+}
+.popup-slider__close-btn {
+  margin-bottom: 5px;
+}
+.popup-slider__img-wrap img {
+  display: none;
+  height: 80vh;
+  width: auto;
+}
+/*# sourceMappingURL=src/stylus/blocks/popup-slider.css.map */

@@ -24,7 +24,7 @@
 				<div class="grid">
 
 					<!-- mobile nav btn -->
-					<div class="m-col-70 m-show col-0">
+					<div class="m-col-20 m-show col-0">
 						<a href="#" class="mobile-btn" id="mobile-btn">
 							<span></span>
 							<span></span>
@@ -33,11 +33,11 @@
 					</div>
 
 					<!-- mobile logo -->
-					<div class="m-col-30 m-show col-0">
+					<div class="m-col-80 m-show col-0">
 						<div class="logo">
 							<h1 class="logo__body">
 								<a href="#" class="logo__link">
-									<img src="images/static/logo.png" alt="Wedding cakes" class="logo__img">
+									<img src="images/static/logo-mobile.png" alt="Wedding cakes" class="logo__img">
 								</a>
 							</h1>
 						</div><!-- /.logo -->
@@ -92,10 +92,10 @@
 			<header class="page-search__header">
 				<div class="container">
 					<div class="grid">
-						<div class="col-50">
+						<div class="col-60">
 							<h3 class="page-search__title">צרו קשר</h3>
 						</div>
-						<div class="col-50">
+						<div class="col-40">
 							<div class="page-search__btn-wrap">
 								<a href="#" class="page-search__btn page-search__btn_open" id="search-open">חיפוש</a>
 								<a href="#" class="page-search__btn page-search__btn_close" id="search-close">סגור חיפוש</a>
@@ -116,31 +116,33 @@
 								</div>
 
 								<div class="search__option-wrap">
-									<div class="checkbox">
-										<input type="checkbox" id="search-checkbox" class="checkbox__input"/>
-										<label for="search-checkbox" class="checkbox__label">
-											כשרה,
-										</label>
+									<div class="search__option-wrap">
+										<div class="checkbox">
+											<input type="checkbox" id="search-checkbox" class="checkbox__input"/>
+											<label for="search-checkbox" class="checkbox__label">
+												כשרה,
+											</label>
+										</div>
 									</div>
-								</div>
 
-								<div class="search__option-wrap">
-									<div class="radio">
-										<input type="radio" id="search-radio-1" class="radio__input" name="search-radio" checked/>
-										<label for="search-radio-1" class="radio__label">
-											פרווה או
-										</label>
+									<div class="search__option-wrap">
+										<div class="radio">
+											<input type="radio" id="search-radio-1" class="radio__input" name="search-radio" checked/>
+											<label for="search-radio-1" class="radio__label">
+												פרווה או
+											</label>
+										</div>
 									</div>
-								</div>
 
-								<div class="search__option-wrap">
-									<div class="radio">
-										<input type="radio" id="search-radio-2" class="radio__input" name="search-radio"/>
-										<label for="search-radio-2" class="radio__label">
-											חלבית ב:
-										</label>
+									<div class="search__option-wrap">
+										<div class="radio">
+											<input type="radio" id="search-radio-2" class="radio__input" name="search-radio"/>
+											<label for="search-radio-2" class="radio__label">
+												חלבית ב:
+											</label>
+										</div>
 									</div>
-								</div>
+								</div><!-- /.search__option-wrap -->
 							</div>
 
 							<div class="search__inputs">
@@ -158,54 +160,60 @@
 
 		<!-- contact text and form -->
 		<div class="container">
-			<div class="contact">
+			<div class="content">
 				<div class="grid">
 					<div class="col-80 s-col-100">
 
-						<div class="contact__text-block">
+						<div class="content__block">
 							<p>Lorem ipsum.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, fugit illo voluptates.</p>
 						</div>
 
-						<div class="contact__text-block">
+						<div class="content__block">
 							<p><b>Lorem ipsum.</b></p>
 							<p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, fugit illo voluptates.</b></p>
 						</div>
 
-						<form class="contact__form">
-							<div class="contact__input-wrap">
-								<input class="contact__input" type="text" placeholder="שם מלא">
-							</div>
+						<div class="content__block">
 
-							<div class="contact__input-wrap">
-								<input class="contact__input" type="email" placeholder="דוא״ל">
-							</div>
+							<div class="contact">
+								<form class="contact__form">
+									<div class="contact__input-wrap">
+										<input class="contact__input" type="text" placeholder="שם מלא">
+									</div>
 
-							<div class="contact__input-wrap">
-								<input class="contact__input" type="text" placeholder="טלפון">
-							</div>
+									<div class="contact__input-wrap">
+										<input class="contact__input" type="email" placeholder="דוא״ל">
+									</div>
 
-							<div class="contact__input-wrap">
-								<textarea class="contact__textarea" placeholder="מהות הפניה"></textarea>
-							</div>
+									<div class="contact__input-wrap">
+										<input class="contact__input" type="text" placeholder="טלפון">
+									</div>
 
-							<div class="contact__input-wrap">
-								<input type="submit" class="contact__submit" value="שלח">
-							</div>
+									<div class="contact__input-wrap">
+										<textarea class="contact__textarea" placeholder="מהות הפניה"></textarea>
+									</div>
 
-							<div class="contact__input-wrap">
-								<div class="checkbox">
-								<input type="checkbox" id="contact-checkbox" class="checkbox__input checkbox__input_alt"/>
-								<label for="contact-checkbox" class="checkbox__label checkbox__label_alt">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. <b>Alias, velit!</b>
-								</label>
-							</div>
-							</div>
-						</form>
+									<div class="contact__input-wrap">
+										<input type="submit" class="contact__submit" value="שלח">
+									</div>
+
+									<div class="contact__input-wrap">
+										<div class="checkbox">
+											<input type="checkbox" id="contact-checkbox" class="checkbox__input checkbox__input_alt"/>
+											<label for="contact-checkbox" class="checkbox__label checkbox__label_alt">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. <b>Alias, velit!</b>
+											</label>
+										</div>
+									</div>
+								</form>
+							</div><!-- /.contact -->
+
+						</div>
 
 					</div>
 				</div>
-			</div><!-- /.contact -->
+			</div><!-- /.content -->
 		</div>
 
 		<!-- FOOTER -->

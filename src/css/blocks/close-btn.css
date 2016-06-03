@@ -1,0 +1,15 @@
+.close-btn {
+  display: inline-block;
+  height: 37px;
+  width: 37px;
+  background-image: url("images/static/close.png");
+  text-decoration: none;
+}
+.close-btn:hover,
+.close-btn:focus {
+  background-image: url("images/static/close-hover.png");
+}
+.close-btn_bordered {
+  border: 1px solid light;
+}
+/*# sourceMappingURL=src/stylus/blocks/close-btn.css.map */

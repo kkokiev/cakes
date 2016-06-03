@@ -1,0 +1,33 @@
+.advertiser-slider__slider {
+  position: relative;
+}
+.advertiser-slider__wrap {
+  position: relative;
+}
+.advertiser-slider .swiper-container {
+  width: 100%;
+}
+.advertiser-slider .swiper-slide {
+  cursor: pointer;
+}
+.advertiser-slider .swiper-slide img {
+  display: block;
+  height: 175px;
+  max-width: 135px;
+  width: 100%;
+}
+.swiper-btn {
+  position: absolute;
+  top: 0;
+  height: 175px;
+  width: 50px;
+  background: #bcbcbc;
+  cursor: pointer;
+}
+.swiper-btn-prev {
+  right: 0;
+}
+.swiper-btn-next {
+  left: 0;
+}
+/*# sourceMappingURL=src/stylus/blocks/advertiser-slider.css.map */

@@ -35,27 +35,16 @@
 			color main
 
 .sub-menu
+	display none
 	overflow hidden
-	height 0
 	position absolute
 	min-width 100%
 	top 100%
 	right 0
 	z-index 1000
-	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"')
-	filter unquote('alpha(opacity=0)')
-	-moz-opacity 0
-	-khtml-opacity 0
-	opacity 0
-	tr(.4s)
 
 	+below(900px)
 		position static
-		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"')
-		filter unquote('alpha(opacity=100)')
-		-moz-opacity 1
-		-khtml-opacity 1
-		opacity 1
 
 	> li
 		border-bottom 1px solid light
@@ -69,6 +58,7 @@
 			color light
 			font-size 20px
 			line-height 20px
+			line-height 40px
 			background main-dark
 			text-decoration none
 
@@ -76,17 +66,6 @@
 			&:focus
 				background #1f1f1f
 
-.sub-menu.open
-	height auto
-	-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"')
-	filter unquote('alpha(opacity=100)')
-	-moz-opacity 1
-	-khtml-opacity 1
-	opacity 1
-
-	>li
-		> a
-			line-height 40px
 
 .menu-mobile-icon
 	display none

@@ -1,0 +1,72 @@
+.menu > li {
+  position: relative;
+  float: right;
+  margin-left: 25px;
+  color: main-light;
+  font-size: 20px;
+below(900px)
+}
+.menu > li > a {
+  display: block;
+  color: main-light;
+  text-decoration: none;
+below(900px)
+}
+.menu > li > a:hover,
+.menu > li > a:focus {
+  color: main;
+}
+.menu >li.active > a {
+  color: main;
+}
+.sub-menu {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  min-width: 100%;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+below(900px)
+}
+.sub-menu > li {
+  border-bottom: 1px solid light;
+}
+.sub-menu > li:last-child {
+  border: none;
+}
+.sub-menu > li > a {
+  display: block;
+  color: light;
+  font-size: 20px;
+  line-height: 20px;
+  line-height: 40px;
+  background: main-dark;
+  text-decoration: none;
+}
+.sub-menu > li > a:hover,
+.sub-menu > li > a:focus {
+  background: #1f1f1f;
+}
+.menu-mobile-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 7px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+below(900px)
+}
+.menu-mobile-icon:hover span {
+  background: main;
+}
+.menu-mobile-icon span {
+  display: block;
+  height: 5px;
+  width: 40px;
+  margin-bottom: 5px;
+  background: main-light;
+}
+/*# sourceMappingURL=src/stylus/blocks/menu.css.map */
