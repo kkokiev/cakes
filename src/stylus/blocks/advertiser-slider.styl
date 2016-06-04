@@ -13,6 +13,37 @@
 	.swiper-slide
 		cursor pointer
 
+
+	&__slide
+		text-align center
+
+	&__slide-content
+		display inline-block
+		position relative
+
+	&__slide-overlay
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background transparent url(images/static/icon-mag.png) center center no-repeat
+		-ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"')
+		filter unquote('alpha(opacity=0)')
+		-moz-opacity 0
+		-khtml-opacity 0
+		opacity 0
+		tr(.3s)
+
+		&:hover,
+		&:focus
+			opacity-none()
+
+	&__slide-img
+		height 175px
+		width 135px
+		bg-image()
+
 		img
 			display block
 			height 175px
@@ -26,15 +57,25 @@
 
 .swiper-btn
 	position absolute
+	display block
 	top 0
 	height 175px
 	width 50px
 	background #bcbcbc
 	cursor pointer
+	text-decoration none
+
+	&:hover,
+	&:focus
+		opacity-strong()
 
 .swiper-btn-prev
 	right 0
+	background-image url(images/static/slider-right.png)
+	bg-image()
 
 .swiper-btn-next
 	left 0
+	background-image url(images/static/slider-left.png)
+	bg-image()
 

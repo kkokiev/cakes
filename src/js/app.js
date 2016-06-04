@@ -31,13 +31,13 @@ if(!(window.console && console.log)) {
 	//show and hide .sub-menu on width > 900
 	$menuItemWithSubmenu.on('mouseenter focusin', function() {
 		if ($(window).width() > 900) {
-			$(this).children('.sub-menu').addClass("js-open").slideDown();
+			$(this).children('.sub-menu').stop().addClass("js-open").slideDown();
 		}
 	});
 
 	$menuItemWithSubmenu.on('mouseleave focusout', function() {
 		if ($(window).width() > 900) {
-			$(this).children('.sub-menu').removeClass('js-open').slideUp();
+			$(this).children('.sub-menu').stop().removeClass('js-open').slideUp();
 		}
 	});
 
@@ -124,7 +124,7 @@ if(!(window.console && console.log)) {
 	*
 	*/
 
-	$('.advertiser-header__img-overlay').on('click', function(event) {
+	$('.advertiser-header__img-body').on('click', function(event) {
 		event.preventDefault();
 		$(this).next().fadeIn();
 	});
@@ -182,9 +182,11 @@ if(!(window.console && console.log)) {
 
 	/*
 	*
-	*setup advertiser slider
+	*setup advertiser slider and popup img
 	*
 	*/
+	var $popupSlider = $('.popup-slider');
+
 	var swiper = new Swiper('.advertiser-slider__slider', {
 		pagination: '.swiper-pagination',
 		slidesPerView: 6,
@@ -198,39 +200,54 @@ if(!(window.console && console.log)) {
 				slidesPerView: 5,
 				spaceBetween: 10
 			},
-			720: {
+			880: {
 				slidesPerView: 4,
 				spaceBetween: 10
 			},
-			570: {
+			740: {
 				slidesPerView: 3,
 				spaceBetween: 10
 			},
-			425: {
+			600: {
 				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			480: {
+				slidesPerView: 1,
 				spaceBetween: 10
 			}
 		}
 	});
 
 
-	$('.advertiser-slider .swiper-slide').on('click', function(){
+	$('.advertiser-slider').find('.swiper-slide').on('click', function(){
 		var $slideIndex = $(this).attr('data-swiper-slide-index'),
 			$slideIndex = parseInt($slideIndex),
 			$imgIndex = $slideIndex + 1;
 
 		$('.popup-slider__img-wrap img').hide();
 		$('.popup-slider__img-wrap img:nth-child('+ $imgIndex +')').show();
-		$('.popup-slider').addClass('popup-slider_opened');
+		$popupSlider.addClass('popup-slider_opened');
 	});
 
-	$('.popup-slider').on('click', function() {
+	$popupSlider.on('click', function() {
 		$(this).removeClass('popup-slider_opened');
 	});
 
-	$('.popup-slider img').on('click', function(event) {
+	$popupSlider.find('img').on('click', function(event) {
 		event.stopPropagation();
 	});
+
+	$('.js-close-popup-slider-btn').on('click', function(event) {
+		event.preventDefault();
+		$popupSlider.removeClass('popup-slider_opened');
+	});
+
+	/*
+	*
+	*setup advertiser slider and popup img
+	*
+	*/
 
 
 })(jQuery);
