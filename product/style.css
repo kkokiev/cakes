@@ -2829,6 +2829,9 @@ a {
 img {
   vertical-align: top;
 }
+.owl-carousel {
+  direction: ltr;
+}
 .advertiser-header {
   padding-bottom: 30px;
   border-bottom: 1px solid #a1a1a1;
@@ -3114,18 +3117,32 @@ img {
   padding-left: 55px;
   padding-right: 55px;
 }
-.advertiser-slider .swiper-container {
-  width: 100%;
-}
-.advertiser-slider .swiper-slide {
+.advertiser-slider__slide {
   cursor: pointer;
 }
-.advertiser-slider__slide {
+.advertiser-slider__slide-content {
+  margin-left: auto;
+  margin-right: auto;
+  height: 175px;
+  position: relative;
+  overflow: hidden;
   text-align: center;
 }
-.advertiser-slider__slide-content {
-  display: inline-block;
+.advertiser-slider__slide-content:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.advertiser-slider__slide-content-img {
   position: relative;
+  float: right;
+  right: 50%;
+}
+.advertiser-slider__slide-content-img img {
+  position: relative;
+  right: -50%;
+  height: 175px;
+  width: auto !important;
 }
 .advertiser-slider__slide-overlay {
   position: absolute;
@@ -3171,7 +3188,8 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.swiper-btn {
+.advertiser-slider .owl-prev,
+.advertiser-slider .owl-next {
   position: absolute;
   display: block;
   top: 0;
@@ -3180,16 +3198,21 @@ img {
   background: #bcbcbc;
   cursor: pointer;
   text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.swiper-btn:hover,
-.swiper-btn:focus {
+.advertiser-slider .owl-prev:hover,
+.advertiser-slider .owl-next:hover,
+.advertiser-slider .owl-prev:focus,
+.advertiser-slider .owl-next:focus {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   filter: alpha(opacity=70);
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
   opacity: 0.7;
 }
-.swiper-btn-prev {
+.advertiser-slider .owl-next {
   right: 0;
   background-image: url("images/static/slider-right.png");
   background-color: transparent;
@@ -3200,7 +3223,7 @@ img {
   -o-background-size: cover;
   background-size: cover;
 }
-.swiper-btn-next {
+.advertiser-slider .owl-prev {
   left: 0;
   background-image: url("images/static/slider-left.png");
   background-color: transparent;
@@ -3213,6 +3236,7 @@ img {
 }
 .article-preview-block {
   padding-top: 50px;
+  overflow-x: hidden;
 }
 .article-preview-block > .grid {
   margin-left: -33px;

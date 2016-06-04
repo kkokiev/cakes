@@ -7,19 +7,27 @@
 		position relative
 		padding-x(55px)
 
-	.swiper-container
-		width 100%
-
-	.swiper-slide
+	&__slide
 		cursor pointer
 
-
-	&__slide
-		text-align center
-
 	&__slide-content
-		display inline-block
+		margin-x(auto)
+		height 175px
 		position relative
+		overflow hidden
+		text-align center
+		clearfix()
+
+	&__slide-content-img
+		position relative
+		float right
+		right 50%
+
+		img
+			position relative
+			right -50%
+			height 175px
+			width auto !important
 
 	&__slide-overlay
 		position absolute
@@ -55,27 +63,31 @@
 	//controls styles
 
 
-.swiper-btn
-	position absolute
-	display block
-	top 0
-	height 175px
-	width 50px
-	background #bcbcbc
-	cursor pointer
-	text-decoration none
+	.owl-prev,
+	.owl-next
+		position absolute
+		display block
+		top 0
+		height 175px
+		width 50px
+		background #bcbcbc
+		cursor pointer
+		text-decoration none
+		text-indent 100%
+		white-space nowrap
+		overflow hidden
 
-	&:hover,
-	&:focus
-		opacity-strong()
+		&:hover,
+		&:focus
+			opacity-strong()
 
-.swiper-btn-prev
-	right 0
-	background-image url(images/static/slider-right.png)
-	bg-image()
+	.owl-next
+		right 0
+		background-image url(images/static/slider-right.png)
+		bg-image()
 
-.swiper-btn-next
-	left 0
-	background-image url(images/static/slider-left.png)
-	bg-image()
+	.owl-prev
+		left 0
+		background-image url(images/static/slider-left.png)
+		bg-image()
 

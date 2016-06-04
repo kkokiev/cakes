@@ -187,47 +187,48 @@ if(!(window.console && console.log)) {
 	*/
 	var $popupSlider = $('.popup-slider');
 
-	var swiper = new Swiper('.advertiser-slider__slider', {
-		pagination: '.swiper-pagination',
-		slidesPerView: 6,
-		paginationClickable: true,
-		nextButton: '#slide-next',
-		prevButton: '#slide-prev',
-		spaceBetween: 10,
+
+	/*owl*/
+	$('.owl-carousel.advertiser-slider__slider').owlCarousel({
+		navContainer: '.advertiser-slider__wrap',
+		nav: true,
 		loop: true,
-		breakpoints: {
-			1024:{
-				slidesPerView: 5,
-				spaceBetween: 10
+		margin: 10,
+		responsive: {
+			0: {
+				items: 1
 			},
-			880: {
-				slidesPerView: 4,
-				spaceBetween: 10
-			},
-			740: {
-				slidesPerView: 3,
-				spaceBetween: 10
-			},
-			600: {
-				slidesPerView: 2,
-				spaceBetween: 10
-			},
+
 			480: {
-				slidesPerView: 1,
-				spaceBetween: 10
+				items: 2
+			},
+
+			600: {
+				items: 3
+			},
+
+			740: {
+				items: 4
+			},
+
+			880: {
+				items: 5
+			},
+
+			1024: {
+				items: 6
 			}
 		}
 	});
+	/*owl end*/
 
 
-	$('.advertiser-slider').find('.swiper-slide').on('click', function(){
-		var $slideIndex = $(this).attr('data-swiper-slide-index'),
-			$slideIndex = parseInt($slideIndex),
-			$imgIndex = $slideIndex + 1;
-
+	$('.advertiser-slider').find('.advertiser-slider__slide').on('click', function(){
+		var $imgSrc = $(this).find('img').attr('src');
 		$('.popup-slider__img-wrap img').hide();
-		$('.popup-slider__img-wrap img:nth-child('+ $imgIndex +')').show();
+		$('.popup-slider__img-wrap img[src="' + $imgSrc + '"]').show();
 		$popupSlider.addClass('popup-slider_opened');
+
 	});
 
 	$popupSlider.on('click', function() {
