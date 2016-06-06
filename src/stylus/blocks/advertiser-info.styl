@@ -2,10 +2,12 @@
 
 	&__review-block
 		padding-left 15px
+		border-left 1px solid border
 
 		+below(900px)
 			padding-left 0
 			margin-bottom 30px
+			border-left none
 
 	&__header
 		padding-top 10px
@@ -16,6 +18,16 @@
 
 		&:last-child
 			margin-bottom 0
+
+	&__review
+		padding-bottom 15px
+		margin-bottom 15px
+		border-bottom 1px solid border
+
+		&:last-child
+			border-bottom none
+			margin-bottom 0
+			padding-bottom 0
 
 	&__review-btn
 		display inline-block
@@ -32,11 +44,9 @@
 
 	&__contact-block
 		padding-right 20px
-		border-right 1px solid #a1a1a1
 
 		+below(900px)
 			padding-right 0
-			border-right none
 
 	&__contact-info
 		padding-left 20px

@@ -155,7 +155,7 @@ if(!(window.console && console.log)) {
 	*setup contact popup in search results
 	*
 	*/
-	$('.advertiser-header__contact-form-btn').on('click', function(event) {
+	$('.js-contact-form-btn').on('click', function(event) {
 		event.preventDefault();
 		$(this).next().fadeIn();
 	});
