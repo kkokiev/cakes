@@ -8,16 +8,16 @@
 	-o-background-size cover
 	background-size cover
 
-	+below(size-tablet)
-		padding-y(50px)
+	+below(size-medium)
+		padding-y(20px)
 
 	&_inner
 		padding-top 50px
 		padding-bottom 90px
 		background #c2c2c2
 
-		+below(size-tablet)
-			padding-y(30px)
+		+below(size-medium)
+			padding-y(20px)
 
 	&__wrap
 		max-width 640px
@@ -34,6 +34,9 @@
 		color light
 		font-size 25px
 		line-height 30px
+
+		+below(size-medium)
+			padding-y(0)
 
 	&__option-wrap
 		float right

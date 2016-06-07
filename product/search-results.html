@@ -23,63 +23,67 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__wrap">
-				<div class="grid">
+				<div class="header__mobile-wrap">
+					<div class="grid">
+						<!-- mobile nav btn -->
+						<div class="m-col-20 m-show col-0">
+							<a href="#" class="mobile-btn" id="mobile-btn">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</div>
 
-					<!-- mobile nav btn -->
-					<div class="m-col-20 m-show col-0">
-						<a href="#" class="mobile-btn" id="mobile-btn">
-							<span></span>
-							<span></span>
-							<span></span>
-						</a>
+						<!-- mobile logo -->
+						<div class="m-col-80 m-show col-0">
+							<div class="logo">
+								<h1 class="logo__body">
+									<a href="#" class="logo__link">
+										<img src="images/static/logo-mobile.png" alt="Wedding cakes" class="logo__img">
+									</a>
+								</h1>
+							</div><!-- /.logo -->
+						</div>
 					</div>
+				</div><!-- /.header__mobile-wrap -->
 
-					<!-- mobile logo -->
-					<div class="m-col-80 m-show col-0">
-						<div class="logo">
-							<h1 class="logo__body">
-								<a href="#" class="logo__link">
-									<img src="images/static/logo-mobile.png" alt="Wedding cakes" class="logo__img">
-								</a>
-							</h1>
-						</div><!-- /.logo -->
-					</div>
-					<!-- menu -->
-					<div class="col-68 m-col-100">
-						<nav class="navbar" id="navbar">
+				<div class="header__desktop-wrap">
+					<div class="grid">
+						<!-- menu -->
+						<div class="col-68 m-col-100">
+							<nav class="navbar" id="navbar">
 
-							<ul class="menu">
-								<li><a href="index.html">ראשי</a></li>
-								<li><a href="advertiser-page.html">הרשימה</a></li>
-								<li>
-									<a href="content.html">למה עוגת חתונה?</a>
-									<ul class="sub-menu">
-										<li><a href="#">מאמרים</a></li>
-										<li><a href="#">סירטונים</a></li>
-										<li><a href="#">תחרות</a></li>
-									</ul>
-								</li>
-								<li><a href="#">אודות האתר</a></li> <!-- about -->
-								<li><a href="contact.html">צרו קשר</a></li>	 <!-- contact us -->
-							</ul>
+								<ul class="menu">
+									<li><a href="index.html">ראשי</a></li>
+									<li><a href="advertiser-page.html">הרשימה</a></li>
+									<li>
+										<a href="content.html">למה עוגת חתונה?</a>
+										<ul class="sub-menu">
+											<li><a href="#">מאמרים</a></li>
+											<li><a href="#">סירטונים</a></li>
+											<li><a href="#">תחרות</a></li>
+										</ul>
+									</li>
+									<li><a href="#">אודות האתר</a></li> <!-- about -->
+									<li><a href="contact.html">צרו קשר</a></li>	 <!-- contact us -->
+								</ul>
 
-						</nav>
-					</div>
+							</nav>
+						</div>
 
-					<!-- logo -->
-					<div class="col-32 m-col-0">
+						<!-- logo -->
+						<div class="col-32 m-col-0">
 
-						<div class="logo">
-							<h1 class="logo__body">
-								<a href="#" class="logo__link">
-									<img src="images/static/logo.png" alt="Wedding cakes" class="logo__img">
-								</a>
-							</h1>
-						</div><!-- /.logo -->
-
-					</div>
-
-				</div><!-- /.grid -->
+							<div class="logo">
+								<h1 class="logo__body">
+									<a href="#" class="logo__link">
+										<img src="images/static/logo.png" alt="Wedding cakes" class="logo__img">
+									</a>
+								</h1>
+							</div><!-- /.logo -->
+						</div>
+					</div><!-- /.grid -->
+				</div><!-- /.header__desktop-wrap -->
 			</div>
 		</div>
 	</header>
@@ -177,13 +181,13 @@
 							<div class="col-68 s-col-80 xs-col-70 xxs-col-100">
 								<div class="advertiser-header__info">
 									<div class="grid">
-										<div class="col-80 m-col-70 s-col-100">
+										<div class="col-80 m-col-70 xxs-col-60">
 											<h4 class="advertiser-header__info-title"><a href="#">Title <small>some subtitle</small></a> <span class="tag">lorem123</span> </h4>
 
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. atque laboriosam quidem, sunt, aliquam nisi odit <a href="#" class="link">קראו עוד >></a></p>
 										</div>
 
-										<div class="col-20 m-col-30 s-col-100">
+										<div class="col-20 m-col-30 xxs-col-40">
 
 											<div class="advertiser-header__img-wrap">
 												<div class="advertiser-header__img-body">

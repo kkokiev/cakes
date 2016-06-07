@@ -14,6 +14,7 @@ if(!(window.console && console.log)) {
 
 
 (function () {
+	var $body = $('body');
 
 	/*
 	*
@@ -45,13 +46,13 @@ if(!(window.console && console.log)) {
 	$('.menu-dropdown-icon > a').append("<span href=\"#\" class=\"menu-mobile-icon\"><span></span><span></span><span></span></span>");
 
 	// //setup show and hide .sub-menu on width < 1100
-	$('.menu-mobile-icon').on('click', function(e) {
-		e.preventDefault();
-		// $(this).parent().next().toggleClass('open');
-		if($(this).parent().next().hasClass('js-open')) {
-			$(this).parent().next().removeClass('js-open').slideUp();
+	$('.menu-mobile-icon').on('click', function(event) {
+		event.preventDefault();
+
+		if($('.sub-menu').hasClass('js-open')) {
+			$('.sub-menu').removeClass('js-open').slideUp();
 		} else {
-			$(this).parent().next().addClass('js-open').slideDown();
+			$('.sub-menu').addClass('js-open').slideDown();
 		}
 	});
 	/*
@@ -124,22 +125,22 @@ if(!(window.console && console.log)) {
 	*
 	*/
 
-	$('.advertiser-header__img-body').on('click', function(event) {
+	$body.on('click', '.advertiser-header__img-body', function(event) {
 		event.preventDefault();
 		$(this).next().fadeIn();
 	});
 
-	$('.js-advertiser-header-close-modal-btn').on('click', function(event) {
+	$body.on('click', '.js-advertiser-header-close-modal-btn', function(event) {
 		event.preventDefault();
 		$('.advertiser-header__img-modal').fadeOut();
 	});
 
-	$('.advertiser-header__img-modal').on('click', function(event) {
+	$body.on('click', '.advertiser-header__img-modal', function(event) {
 		event.preventDefault();
 		$(this).fadeOut();
 	});
 
-	$('.advertiser-header__img-modal-body').on('click', function(event) {
+	$body.on('click', '.advertiser-header__img-modal-body', function(event) {
 		event.stopPropagation();
 	});
 	/*
@@ -155,22 +156,22 @@ if(!(window.console && console.log)) {
 	*setup contact popup in search results
 	*
 	*/
-	$('.js-contact-form-btn').on('click', function(event) {
+	$body.on('click', '.js-contact-form-btn', function(event) {
 		event.preventDefault();
 		$(this).next().fadeIn();
 	});
 
-	$('.js-close-modal-contact-btn').on('click', function(event) {
+	$body.on('click', '.js-close-modal-contact-btn', function(event) {
 		event.preventDefault();
 		$('.modal-contact').fadeOut();
 	});
 
-	$('.modal-contact').on('click', function(event) {
+	$body.on('click', '.modal-contact', function(event) {
 		event.preventDefault();
 		$(this).fadeOut();
 	});
 
-	$('.modal-contact__body').on('click', function(event) {
+	$body.on('click', '.modal-contact__body', function(event) {
 		event.stopPropagation();
 	});
 	/*

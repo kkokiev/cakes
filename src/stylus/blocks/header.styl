@@ -4,3 +4,37 @@
 	+below(900px)
 		padding-y(20px)
 
+	&__mobile-wrap
+		>.grid
+
+			+below(900px)
+				display table
+				width 100%
+
+			> div
+
+				+below(900px)
+					display table-cell
+					float none
+					vertical-align middle
+
+	&__desktop-wrap
+		> .grid
+			display table
+			width 100%
+
+			+below(900px)
+				display block
+
+			> div
+				display table-cell
+				float none
+				vertical-align middle
+
+				+below(900px)
+					display block
+
+					&:last-child
+						display none
+
+

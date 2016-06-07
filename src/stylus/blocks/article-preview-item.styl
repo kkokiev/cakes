@@ -5,9 +5,13 @@
 	&__header
 		padding-y(18px)
 
+		+below(size-medium)
+			padding-y(5px)
+
 		h3
 			color main-dark
 			font-size 30px
+			single-line()
 
 			a
 				color main-dark
@@ -20,6 +24,9 @@
 	&__body
 		margin-bottom 18px
 
+		+below(size-medium)
+			margin-bottom 5px
+
 	&__img
 		display block
 		height 0
@@ -28,6 +35,9 @@
 		padding-bottom 70%
 		bg-image()
 		text-decoration none
+
+		+below(size-medium)
+			margin-bottom 5px
 
 		&:hover,
 		&:focus
@@ -40,5 +50,9 @@
 	&__footer
 		padding-y(18px)
 		border-top 1px solid #a1a1a1
+
+		+below(size-medium)
+			padding-top 5px
+			padding-bottom 15px
 
 
