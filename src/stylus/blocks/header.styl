@@ -1,19 +1,22 @@
 .header
 	padding-y(30px)
 
-	+below(900px)
+	+below(size-medium)
 		padding-y(20px)
+
+	+below(size-tablet)
+		padding-y(10px)
 
 	&__mobile-wrap
 		>.grid
 
-			+below(900px)
+			+below(size-medium)
 				display table
 				width 100%
 
 			> div
 
-				+below(900px)
+				+below(size-medium)
 					display table-cell
 					float none
 					vertical-align middle
@@ -23,7 +26,7 @@
 			display table
 			width 100%
 
-			+below(900px)
+			+below(size-medium)
 				display block
 
 			> div
@@ -31,7 +34,7 @@
 				float none
 				vertical-align middle
 
-				+below(900px)
+				+below(size-medium)
 					display block
 
 					&:last-child

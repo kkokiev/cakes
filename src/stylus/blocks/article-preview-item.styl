@@ -1,5 +1,5 @@
 .article-preview-item
-	max-width 300px
+	// max-width 300px
 	margin-x(auto)
 
 	&__header
@@ -26,6 +26,22 @@
 
 		+below(size-medium)
 			margin-bottom 5px
+
+		.grid
+			+below(size-tablet)
+				display table
+				width 100%
+
+			> div
+				+below(size-tablet)
+					float none
+					display table-cell
+
+				&:first-child
+					vertical-align middle
+
+				&:last-child
+					padding-right 10px
 
 	&__img
 		display block

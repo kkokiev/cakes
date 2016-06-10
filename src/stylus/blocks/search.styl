@@ -11,6 +11,9 @@
 	+below(size-medium)
 		padding-y(20px)
 
+	+below(size-tablet)
+		padding-y(5px)
+
 	&_inner
 		padding-top 50px
 		padding-bottom 90px
@@ -19,13 +22,17 @@
 		+below(size-medium)
 			padding-y(20px)
 
+		+below(size-tablet)
+			padding-y(5px)
+
 	&__wrap
 		max-width 640px
 		margin 0 auto
 		padding-x(20px)
 
 		+below(size-tablet)
-			max-width 90%
+			max-width 100%
+			padding-x(10px)
 
 	&__options
 		clearfix()
@@ -41,7 +48,7 @@
 	&__option-wrap
 		float right
 		margin-left 10px
-		margin-bottom 5px
+		margin-bottom 3px
 		font-size 22px
 
 	&__inputs
@@ -60,10 +67,11 @@
 
 		+below(size-tablet)
 			height 50px
+			font-size 20px
 
 		+below(size-smallest)
+			height 38px
 			padding-x(15px)
-			font-size 20px
 
 	&__submit-wrap
 		position absolute

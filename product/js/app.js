@@ -22,21 +22,19 @@ if(!(window.console && console.log)) {
 	*
 	*/
 
-	var $menu = $('.menu'),
-		$menuItem = $('.menu>li'),
-		$menuItemWithSubmenu = $('.menu>li:has( > .sub-menu)');
+	var $menuItemWithSubmenu = '.menu>li:has( > .sub-menu)';
 
 	//add special class to menu item what has dropdown
-	$menuItemWithSubmenu.addClass('menu-dropdown-icon');
+	$('.menu>li:has( > .sub-menu)').addClass('menu-dropdown-icon');
 
 	//show and hide .sub-menu on width > 900
-	$menuItemWithSubmenu.on('mouseenter focusin', function() {
+	$body.on('mouseenter focusin', $menuItemWithSubmenu, function() {
 		if ($(window).width() > 900) {
 			$(this).children('.sub-menu').stop().addClass("js-open").slideDown();
 		}
 	});
 
-	$menuItemWithSubmenu.on('mouseleave focusout', function() {
+	$body.on('mouseleave focusout', $menuItemWithSubmenu, function() {
 		if ($(window).width() > 900) {
 			$(this).children('.sub-menu').stop().removeClass('js-open').slideUp();
 		}
@@ -46,7 +44,7 @@ if(!(window.console && console.log)) {
 	$('.menu-dropdown-icon > a').append("<span href=\"#\" class=\"menu-mobile-icon\"><span></span><span></span><span></span></span>");
 
 	// //setup show and hide .sub-menu on width < 1100
-	$('.menu-mobile-icon').on('click', function(event) {
+	$body.on('click', '.menu-mobile-icon', function(event) {
 		event.preventDefault();
 
 		if($('.sub-menu').hasClass('js-open')) {
@@ -70,7 +68,7 @@ if(!(window.console && console.log)) {
 	var $navBtn = $('#mobile-btn'),
 		$navBar = $('#navbar');
 
-	$navBtn.on('click', function(event) {
+	$body.on('click', '#mobile-btn', function(event) {
 		event.preventDefault();
 
 		if( $navBar.hasClass('js-nav-open')) {
@@ -99,14 +97,14 @@ if(!(window.console && console.log)) {
 		$searchWrap = $('#search-wrap');
 
 
-		$searchBtnOpen.on('click', function(event) {
+		$body.on('click', '#search-open', function(event) {
 			event.preventDefault();
 			$(this).css('display', 'none');
 			$searchBtnClose.css('display', 'inline-block');
 			$searchWrap.slideDown();
 		});
 
-		$searchBtnClose.on('click', function(event) {
+		$body.on('click', '#search-close', function(event) {
 			event.preventDefault();
 			$(this).css('display', 'none');
 			$searchBtnOpen.css('display', 'inline-block');
@@ -125,7 +123,7 @@ if(!(window.console && console.log)) {
 	*
 	*/
 
-	$body.on('click', '.advertiser-header__img-body', function(event) {
+	$body.on('click', '.js-advertiser-header-img-body', function(event) {
 		event.preventDefault();
 		$(this).next().fadeIn();
 	});
@@ -135,12 +133,12 @@ if(!(window.console && console.log)) {
 		$('.advertiser-header__img-modal').fadeOut();
 	});
 
-	$body.on('click', '.advertiser-header__img-modal', function(event) {
+	$body.on('click', '.js-advertiser-header-img-modal', function(event) {
 		event.preventDefault();
 		$(this).fadeOut();
 	});
 
-	$body.on('click', '.advertiser-header__img-modal-body', function(event) {
+	$body.on('click', '.js-advertiser-header-img-modal-body', function(event) {
 		event.stopPropagation();
 	});
 	/*
@@ -166,12 +164,12 @@ if(!(window.console && console.log)) {
 		$('.modal-contact').fadeOut();
 	});
 
-	$body.on('click', '.modal-contact', function(event) {
+	$body.on('click', '.js-modal-contact', function(event) {
 		event.preventDefault();
 		$(this).fadeOut();
 	});
 
-	$body.on('click', '.modal-contact__body', function(event) {
+	$body.on('click', '.js-modal-contact-body', function(event) {
 		event.stopPropagation();
 	});
 	/*
@@ -187,7 +185,6 @@ if(!(window.console && console.log)) {
 	*
 	*/
 	var $popupSlider = $('.popup-slider');
-
 
 	/*owl*/
 	$('.owl-carousel.advertiser-slider__slider').owlCarousel({
@@ -224,7 +221,7 @@ if(!(window.console && console.log)) {
 	/*owl end*/
 
 
-	$('.advertiser-slider').find('.advertiser-slider__slide').on('click', function(){
+	$body.on('click', '.advertiser-slider__slide', function(){
 		var $imgSrc = $(this).find('img').attr('src');
 		$('.popup-slider__img-wrap img').hide();
 		$('.popup-slider__img-wrap img[src="' + $imgSrc + '"]').show();
@@ -232,15 +229,15 @@ if(!(window.console && console.log)) {
 
 	});
 
-	$popupSlider.on('click', function() {
+	$body.on('click', '.popup-slider', function() {
 		$(this).removeClass('popup-slider_opened');
 	});
 
-	$popupSlider.find('img').on('click', function(event) {
+	$body.on('click', '.popup-slider img', function(event) {
 		event.stopPropagation();
 	});
 
-	$('.js-close-popup-slider-btn').on('click', function(event) {
+	$body.on('click', '.js-close-popup-slider-btn', function(event) {
 		event.preventDefault();
 		$popupSlider.removeClass('popup-slider_opened');
 	});
