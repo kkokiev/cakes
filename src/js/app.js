@@ -24,9 +24,6 @@ if(!(window.console && console.log)) {
 
 	var $menuItemWithSubmenu = '.menu>li:has( > .sub-menu)';
 
-	//add special class to menu item what has dropdown
-	$('.menu>li:has( > .sub-menu)').addClass('menu-dropdown-icon');
-
 	//show and hide .sub-menu on width > 900
 	$body.on('mouseenter focusin', $menuItemWithSubmenu, function() {
 		if ($(window).width() > 900) {
@@ -40,19 +37,6 @@ if(!(window.console && console.log)) {
 		}
 	});
 
-	// //add button for show/hide sub-menu on mobile
-	$('.menu-dropdown-icon > a').append("<span href=\"#\" class=\"menu-mobile-icon\"><span></span><span></span><span></span></span>");
-
-	// //setup show and hide .sub-menu on width < 1100
-	$body.on('click', '.menu-mobile-icon', function(event) {
-		event.preventDefault();
-
-		if($('.sub-menu').hasClass('js-open')) {
-			$('.sub-menu').removeClass('js-open').slideUp();
-		} else {
-			$('.sub-menu').addClass('js-open').slideDown();
-		}
-	});
 	/*
 	*
 	* end setup .menu
@@ -109,6 +93,16 @@ if(!(window.console && console.log)) {
 			$(this).css('display', 'none');
 			$searchBtnOpen.css('display', 'inline-block');
 			$searchWrap.slideUp();
+		});
+
+		$body.on('click', function() {
+			$searchBtnClose.css('display', 'none');
+			$searchBtnOpen.css('display', 'inline-block');
+			$searchWrap.slideUp();
+		});
+
+		$body.on('click', '.js-page-search', function(event) {
+			event.stopPropagation();
 		});
 	/*
 	*
@@ -184,7 +178,7 @@ if(!(window.console && console.log)) {
 	*setup advertiser slider and popup img
 	*
 	*/
-	var $popupSlider = $('.popup-slider');
+	var $popupSlider = $('.js-popup-slider');
 
 	/*owl*/
 	$('.owl-carousel.advertiser-slider__slider').owlCarousel({
@@ -229,11 +223,11 @@ if(!(window.console && console.log)) {
 
 	});
 
-	$body.on('click', '.popup-slider', function() {
+	$body.on('click', '.js-popup-slider', function() {
 		$(this).removeClass('popup-slider_opened');
 	});
 
-	$body.on('click', '.popup-slider img', function(event) {
+	$body.on('click', '.js-popup-slider img', function(event) {
 		event.stopPropagation();
 	});
 

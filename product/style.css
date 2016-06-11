@@ -2833,15 +2833,10 @@ img {
   direction: ltr;
 }
 .advertiser-header {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #a1a1a1;
 }
 @media only screen and (max-width: 900px) {
-  .advertiser-header {
-    padding-bottom: 10px;
-  }
-}
-@media only screen and (max-width: 768px) {
   .advertiser-header {
     padding-bottom: 5px;
   }
@@ -2929,10 +2924,26 @@ img {
 }
 .advertiser-header__info-title small {
   font-size: 20px;
+  line-height: 34px;
+}
+.advertiser-header__info-title .tag {
+  position: relative;
+  top: -3px;
+}
+.advertiser-header__info-title-separator {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 .advertiser-header__img-wrap {
   padding-right: 20px;
   text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img-wrap {
+    text-align: right;
+    padding-right: 0;
+  }
 }
 .advertiser-header__img-body {
   z-index: 1;
@@ -2940,8 +2951,15 @@ img {
   display: inline-block;
   width: 80px;
   overflow: hidden;
+  cursor: pointer;
 }
-.advertiser-header__img-body:hover .advertiser-header__img-overlay {
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img-body {
+    width: auto;
+  }
+}
+.advertiser-header__img-body:hover .advertiser-header__img-overlay,
+.advertiser-header__img-body:focus .advertiser-header__img-overlay {
   top: 0;
 }
 .advertiser-header__img {
@@ -2958,6 +2976,11 @@ img {
   -o-background-size: cover;
   background-size: cover;
 }
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img {
+    display: none;
+  }
+}
 .advertiser-header__img:after {
   content: '';
   position: absolute;
@@ -2968,24 +2991,55 @@ img {
   width: 100%;
   border: 4px solid rgba(255,255,255,0.2);
 }
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img:after {
+    display: none;
+  }
+}
 .advertiser-header__img-overlay {
   position: absolute;
   top: 100%;
   left: 0;
   height: 100%;
   width: 100%;
+  display: inline-block;
   text-decoration: none;
   background-image: url("images/static/icon-mag.png");
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img-overlay {
+    position: static;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    line-height: 30px;
+    text-indent: 0;
+    background-image: none;
+    background: #464646;
+    vertical-align: top;
+  }
 }
 .advertiser-header__img-overlay:hover,
 .advertiser-header__img-overlay:focus {
   top: 0;
 }
+@media only screen and (max-width: 600px) {
+  .advertiser-header__img-overlay:hover:hover,
+  .advertiser-header__img-overlay:focus:hover,
+  .advertiser-header__img-overlay:hover:focus,
+  .advertiser-header__img-overlay:focus:focus {
+    background: #000;
+  }
+}
 .advertiser-header__call-btn-wrap {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .advertiser-header__call-btn-wrap:last-child {
   margin-bottom: 0;
@@ -3043,8 +3097,16 @@ img {
 @media only screen and (max-width: 768px) {
   .advertiser-header__footer {
     padding-right: 0;
-    padding-top: 10px;
+    padding-top: 3px;
   }
+}
+.advertiser-header__footer > .grid {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.advertiser-header__footer > .grid > div {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .advertiser-header__tags-wrap {
   padding-right: 20px;
@@ -3439,6 +3501,12 @@ img {
   overflow: hidden;
   text-decoration: none;
   text-align: center;
+  background: #727272;
+}
+@media only screen and (max-width: 768px) {
+  .call-btn {
+    padding-left: 5px;
+  }
 }
 .call-btn:hover .call-btn__overlay,
 .call-btn:focus .call-btn__overlay {
@@ -3448,15 +3516,32 @@ img {
   display: block;
   padding: 5px;
   color: #fff;
-  background: #727272;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .call-btn__body {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .call-btn__body-title {
   display: block;
+  max-width: 100%;
   font-size: 16px;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 768px) {
+  .call-btn__body-title {
+    display: inline;
+    line-height: 30px;
+  }
 }
 .call-btn__advertiser {
   display: block;
@@ -3466,6 +3551,14 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 768px) {
+  .call-btn__advertiser {
+    display: inline;
+    font-size: 16px;
+    line-height: 30px;
+    max-width: none;
+  }
 }
 .call-btn__overlay {
   position: absolute;
@@ -3483,6 +3576,11 @@ img {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media only screen and (max-width: 768px) {
+  .call-btn__overlay {
+    display: none;
+  }
 }
 .call-btn__overlay span {
   display: inline-block;
@@ -3988,10 +4086,21 @@ img {
 @media only screen and (max-width: 900px) {
   .sub-menu {
     position: static;
+    display: block !important;
   }
 }
 .sub-menu > li {
   border-bottom: 1px solid #fff;
+}
+@media only screen and (max-width: 900px) {
+  .sub-menu > li {
+    border-bottom: 1px solid #8a8a8a;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .sub-menu > li:first-child {
+    border-top: 1px solid #8a8a8a;
+  }
 }
 .sub-menu > li:last-child {
   border: none;
@@ -4002,50 +4111,35 @@ img {
   padding-right: 10px;
   color: #fff;
   font-size: 20px;
-  line-height: 20px;
   line-height: 40px;
   background: #1f1f1f;
   text-decoration: none;
+}
+@media only screen and (max-width: 900px) {
+  .sub-menu > li > a {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 32px;
+    color: #8a8a8a;
+    background: #fff;
+  }
 }
 .sub-menu > li > a:hover,
 .sub-menu > li > a:focus {
   color: #1f1f1f;
   background: #ededed;
 }
+@media only screen and (max-width: 900px) {
+  .sub-menu > li > a:hover,
+  .sub-menu > li > a:focus {
+    color: #000;
+    background: #fff;
+  }
+}
 .sub-menu > li.active > a {
   color: #1f1f1f;
   background: #ededed;
-}
-.menu-mobile-icon {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 7px;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-}
-.menu-mobile-icon:hover span {
-  background: #000;
-}
-.menu-mobile-icon span {
-  display: block;
-  height: 5px;
-  width: 40px;
-  margin-bottom: 5px;
-  background: #8a8a8a;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-@media only screen and (max-width: 900px) {
-  .menu-mobile-icon {
-    display: block;
-  }
 }
 .mobile-btn {
   display: inline-block;
@@ -4079,6 +4173,7 @@ img {
   background: rgba(255,255,255,0.5);
   overflow-y: auto;
   overflow-x: hidden;
+  cursor: pointer;
 }
 .modal-contact__body {
   width: 930px;
@@ -4160,6 +4255,15 @@ img {
     padding-bottom: 10px;
   }
 }
+.page-search__header .grid {
+  display: table;
+  width: 100%;
+}
+.page-search__header .grid > div {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
 .page-search__title {
   color: #fff;
   font-size: 40px;
@@ -4168,7 +4272,11 @@ img {
 @media only screen and (max-width: 900px) {
   .page-search__title {
     font-size: 25px;
+    line-height: 1.1;
   }
+}
+.page-search__title-special {
+  white-space: nowrap;
 }
 .page-search__btn-wrap {
   padding-top: 10px;
@@ -4366,14 +4474,14 @@ img {
 }
 @media only screen and (max-width: 900px) {
   .search {
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
   .search {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 10px;
   }
 }
 .search_inner {
@@ -4383,14 +4491,14 @@ img {
 }
 @media only screen and (max-width: 900px) {
   .search_inner {
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
   .search_inner {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 10px;
   }
 }
 .search__wrap {
@@ -4507,13 +4615,13 @@ img {
   padding-right: 5px;
   color: #fff;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 22px;
   text-decoration: none;
   background: #8c6239;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .tag_type-2 {
   background: #0072bb;

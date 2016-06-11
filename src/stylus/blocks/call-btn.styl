@@ -6,6 +6,10 @@
 	overflow hidden
 	text-decoration none
 	text-align center
+	background #727272
+
+	+below(size-tablet)
+		padding-left 5px
 
 	&:hover,
 	&:focus
@@ -17,13 +21,23 @@
 		display block
 		padding 5px
 		color light
-		background #727272
+		overflow hidden
+
+		+below(size-tablet)
+			padding 0
+			padding-x(5px)
+			single-line()
 
 	&__body-title
 		display block
+		max-width 100%
 		font-size 16px
 		line-height 1.2
 		single-line()
+
+		+below(size-tablet)
+			display inline
+			line-height 30px
 
 	&__advertiser
 		display block
@@ -31,6 +45,12 @@
 		font-size 18px
 		line-height 1.2
 		single-line()
+
+		+below(size-tablet)
+			display inline
+			font-size 16px
+			line-height 30px
+			max-width none
 
 
 	&__overlay
@@ -45,6 +65,9 @@
 		background #000
 		text-align middle
 		tr(.3s)
+
+		+below(size-tablet)
+			display none
 
 		span
 			display inline-block

@@ -46,9 +46,17 @@
 
 	+below(900px)
 		position static
+		display block !important
 
 	> li
 		border-bottom 1px solid light
+
+		+below(900px)
+			border-bottom 1px solid main-light
+
+		&:first-child
+			+below(900px)
+				border-top 1px solid main-light
 
 		&:last-child
 			border none
@@ -58,46 +66,27 @@
 			padding-x(10px)
 			color light
 			font-size 20px
-			line-height 20px
 			line-height 40px
 			background #1f1f1f
 			text-decoration none
+
+			+below(900px)
+				padding-x(0)
+				font-size 16px
+				line-height 32px
+				color main-light
+				background light
 
 			&:hover,
 			&:focus
 				color #1f1f1f
 				background #ededed
 
+				+below(900px)
+					color main
+					background light
 	> li.active
 
 		> a
 			color #1f1f1f
 			background #ededed
-
-
-.menu-mobile-icon
-	display none
-	position absolute
-	top 0
-	left 0
-	padding-top 7px
-	margin-y(auto)
-	height 40px
-	width 40px
-	cursor pointer
-
-	&:hover
-		span
-			background main
-
-	span
-		display block
-		height 5px
-		width 40px
-		margin-bottom 5px
-		background main-light
-		tr(.3s)
-
-
-	+below(900px)
-		display block

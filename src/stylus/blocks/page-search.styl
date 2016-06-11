@@ -9,6 +9,15 @@
 		+below(size-medium)
 			padding-y(10px)
 
+		.grid
+			display table
+			width 100%
+
+			> div
+				display table-cell
+				float none
+				vertical-align middle
+
 	&__title
 		color light
 		font-size 40px
@@ -16,6 +25,10 @@
 
 		+below(size-medium)
 			font-size 25px
+			line-height 1.1
+
+	&__title-special
+		white-space nowrap
 
 	&__btn-wrap
 		padding-top 10px
