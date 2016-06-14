@@ -3004,7 +3004,7 @@ img {
   width: 100%;
   display: inline-block;
   text-decoration: none;
-  background-image: url("images/static/icon-mag.png");
+  background-image: url("images/icon-mag.png");
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -3268,7 +3268,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent url("images/static/icon-mag.png") center center no-repeat;
+  background: transparent url("images/icon-mag.png") center center no-repeat;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   -moz-opacity: 0;
@@ -3338,7 +3338,7 @@ img {
 }
 .advertiser-slider .owl-next {
   right: 0;
-  background-image: url("images/static/slider-right.png");
+  background-image: url("images/slider-right.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3349,7 +3349,7 @@ img {
 }
 .advertiser-slider .owl-prev {
   left: 0;
-  background-image: url("images/static/slider-left.png");
+  background-image: url("images/slider-left.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3615,7 +3615,7 @@ img {
   display: block;
   height: 28px;
   width: 28px;
-  background-image: url("images/static/bg-check-1.png");
+  background-image: url("images/bg-check-1.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3644,7 +3644,7 @@ img {
   display: block;
   height: 28px;
   width: 28px;
-  background-image: url("images/static/bg-check-2.png");
+  background-image: url("images/bg-check-2.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3662,7 +3662,7 @@ img {
   display: block;
   height: 28px;
   width: 28px;
-  background-image: url("images/static/bg-check-3.png");
+  background-image: url("images/bg-check-3.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3697,7 +3697,7 @@ img {
   display: inline-block;
   height: 37px;
   width: 37px;
-  background-image: url("images/static/close.png");
+  background-image: url("images/close.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3709,7 +3709,7 @@ img {
 }
 .close-btn:hover,
 .close-btn:focus {
-  background-image: url("images/static/close-hover.png");
+  background-image: url("images/close-hover.png");
 }
 .close-btn_bordered {
   border: 1px solid #fff;
@@ -4012,7 +4012,7 @@ img {
   }
 }
 .main_contact {
-  background-image: url("images/static/bg-big-2.jpg");
+  background-image: url("images/bg-big-2.jpg");
   background-color: transparent;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -4022,7 +4022,7 @@ img {
   background-size: auto 100%;
 }
 .main_content {
-  background-image: url("images/static/bg-big.jpg");
+  background-image: url("images/bg-big.jpg");
   background-color: transparent;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -4390,7 +4390,7 @@ img {
   display: block;
   height: 28px;
   width: 28px;
-  background-image: url("images/static/bg-radio-1.png");
+  background-image: url("images/bg-radio-1.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4412,7 +4412,7 @@ img {
   display: block;
   height: 28px;
   width: 28px;
-  background-image: url("images/static/bg-radio-2.png");
+  background-image: url("images/bg-radio-2.png");
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4466,7 +4466,9 @@ img {
   width: 100%;
   padding-top: 100px;
   padding-bottom: 145px;
-  background: #c2c2c2 url("images/static/bg-1.jpg") center center no-repeat;
+  background-color: #c2c2c2;
+  background-position: center center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
